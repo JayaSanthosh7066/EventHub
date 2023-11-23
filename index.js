@@ -31,12 +31,12 @@ app.use(morgan());
 app.use(cookieParser());
 app.use(express.json());
 
-app.use("/api/auth", authRoute);
-app.use("/api/halls", hallsRoute);
-app.use("/api/slots", slotsRoute);
-app.use("/api/users", usersRoute);
-app.use("/api/contact", contactRoute);
-app.use("/api/confirmb", confirmbRoute);
+app.use("/auth", authRoute);
+app.use("/halls", hallsRoute);
+app.use("/slots", slotsRoute);
+app.use("/users", usersRoute);
+app.use("/contact", contactRoute);
+app.use("/confirmb", confirmbRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
